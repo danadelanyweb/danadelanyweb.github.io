@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="fouc_bg">
 <head>
 	<title>Dana Delany Web Site</title>
 	<meta charset="utf-8">
@@ -7,16 +7,23 @@
 	<meta name="viewport" content="width=device-width; initial-scale=1">
 	<style>
 		/* handle github FOUC */
-		html {
+		.fouc_bg {
 			background-color: rgb(25,30,35);
 		}
 
-		body {
-			display: none;
+		.fouc_hide {
+/*			display: none;
+*/			opacity: 0;
+			transition: opacity 1s ease-in-out;
+		}
+
+		.fouc_show {
+/*			display: block;
+*/			opacity: 1;
 		}
 	</style>
 </head>
-<body>
+<body class="fouc_hide">
 	<main>
 		<article>
 			<section id="announcement">
